@@ -1,5 +1,3 @@
-package easy.leetcode14;
-
 public class Solution {
 
     public static String longestCommonPrefix(String[] strs) {
@@ -38,7 +36,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        String[] test = {"flower", "flow", "flight"};
+        String[] test = { "flower", "flow", "flight" };
 
         String prefix = longestCommonPrefix(test);
 

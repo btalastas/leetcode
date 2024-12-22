@@ -1,30 +1,22 @@
-package easy.leetcode108;
-
 public class Solution {
 
-    public class TreeNode {
+    public int removeDuplicates(int[] nums) {
 
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
+        /**
+         * walk through array if seen number is -1, assign seen number to the
+         * first number in array if seen number is == to current number, remove
+         * current number, increment k
+         */
+        if (nums.length == 0) {
+            return 0;
         }
-
-        TreeNode(int val) {
-            this.val = val;
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[j] != nums[i]) {
+                i++;
+                nums[i] = nums[j];
+            }
         }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
+        return i + 1;
     }
-
-    public TreeNode sortedArrayToBST(int[] nums) {
-        
-        return null;
-    }
-
 }
